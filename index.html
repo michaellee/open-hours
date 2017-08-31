@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="open-hours"></div>
+  <script src="./open-hours.js" charset="utf-8"></script>
+  <script>
+    const hours = {
+      "Monday":     { start: 1000, end: 1800 },
+      "Tuesday":    { start: 1400, end: 1800 },
+      "Wednesday":  { start: 1100, end: 1900 },
+      "Thursday":   { start: 1300, end: 1800 },
+      "Friday":     { start: 1000, end: 1700 },
+      "Saturday":   { start: 900, end: 1700 },
+      "Sunday":     {}
+    }
+
+    generateTime(hours)
+  </script>
+</body>
+</html>
