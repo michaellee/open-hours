@@ -15,19 +15,39 @@ var formatTime = function (time) {
   }
 }
 
+const weekIndex = {
+  0: "Sunday",
+  1: "Monday",
+  2: "Tuesday",
+  3: "Wednesday",
+  4: "Thursday",
+  5: "Friday",
+  6: "Saturday"
+}
+
+var determineDay = function (day, dayDiv) {
+  var now = new Date()
+  if (day === weekIndex[now.getDay()]) {
+    dayDiv.style["font-weight"] = "bold"
+  }
+}
+
 var generateTime = function (hours) {
   var rootElement = document.getElementById("open-hours")
   var table = document.createElement("table")
   if (rootElement) {
     for (var day in hours) {
       var dayDiv = document.createElement("tr")
+
+      determineDay(day, dayDiv)
+
       var dayTitleElement = document.createElement("td")
       var dayTimesElement = document.createElement("td")
 
       var dayTitle = document.createTextNode(day)
       dayTitleElement.appendChild(dayTitle)
       dayDiv.appendChild(dayTitleElement)
-      
+
       var dayHours = ""
 
       if (Object.keys(hours[day]).length === 0) {
