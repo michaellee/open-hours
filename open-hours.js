@@ -17,20 +17,30 @@ var formatTime = function (time) {
 
 var generateTime = function (hours) {
   var rootElement = document.getElementById("open-hours")
+  var table = document.createElement("table")
   if (rootElement) {
     for (var day in hours) {
-      var dayDiv = document.createElement("div")
+      var dayDiv = document.createElement("tr")
+      var dayTitleElement = document.createElement("td")
+      var dayTimesElement = document.createElement("td")
+
+      var dayTitle = document.createTextNode(day)
+      dayTitleElement.appendChild(dayTitle)
+      dayDiv.appendChild(dayTitleElement)
+      
       var dayHours = ""
 
       if (Object.keys(hours[day]).length === 0) {
-        dayHours = `${day} Closed`
+        dayHours = `Closed`
       } else {
-        dayHours = `${day} ${formatTime(hours[day]["start"])} - ${formatTime(hours[day]["end"])}`
+        dayHours = `${formatTime(hours[day]["start"])} - ${formatTime(hours[day]["end"])}`
       }
 
-      var dayContent = document.createTextNode(dayHours)
-      dayDiv.appendChild(dayContent)
-      rootElement.appendChild(dayDiv)
+      var dayTimes = document.createTextNode(dayHours)
+      dayTimesElement.appendChild(dayTimes)
+      dayDiv.appendChild(dayTimesElement)
+      table.appendChild(dayDiv)
     }
+    rootElement.appendChild(table)
   }
 }
