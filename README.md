@@ -65,4 +65,4 @@ If your business is closed certain days, simply pass an object for that day with
 
 ---
 
-OpenHours is by [Michael Lee](https://michaelsoolee.com/about). If you enjoy OpenHours, [tip him some :beer: money](https://goo.gl/5tXJXv)
+OpenHours is by [Michael Lee](https://michaelsoolee.com/about). If you enjoy OpenHours, [tip Michael some :beer: money](https://goo.gl/5tXJXv)
