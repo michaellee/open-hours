@@ -3,6 +3,9 @@ _Add business hours of operation to your site_
 
 Open Hours lets you simply add your business' hours of operation to your site by defining a simple JavaScript object. It also determines the current day and highlights the day on visit. Open Hours doesn't have any dependencies and is written in plain JavaScript.
 
+## What's it look like?
+![Open Hours rendered table](https://user-images.githubusercontent.com/1329644/29952820-d59d6ac0-8e99-11e7-9d92-62af28256cdc.png)
+
 ## How to use Open Hours
 
 ### Download
@@ -65,4 +68,4 @@ If your business is closed certain days, simply pass an object for that day with
 
 ---
 
-Open Hours is by [Michael Lee](https://michaelsoolee.com/about). If you enjoy Open Hours, [tip Michael some :beer: money](https://goo.gl/5tXJXv)
+Open Hours is by [Michael Lee](https://michaelsoolee.com/about). If you enjoy Open Hours, [tip Michael some :beer: beer money](https://goo.gl/5tXJXv).
